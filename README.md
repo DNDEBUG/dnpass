@@ -33,7 +33,7 @@ xxd -c 100000000 -ps password_file.enc > hex_data.txt
 You can tweak the settings for openssl and xxd  
 but you have to match them in the script  
   
-**Add the password file to the script**  
+### Adding the password file to the script  
   
 Start by editing this part  
 ```
