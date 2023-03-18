@@ -4,7 +4,7 @@ TEST2
 TEST3
 EOF)
 
-tc() { read -rp 'Enter Your Password: ' password; printf %s "$1" | xxd -r -c 256 -ps | openssl enc -d -aes-256-cbc -pbkdf2 -k "$password"; }
+tc() { read -rp 'Enter Your Password: ' password; printf %s "$1" | xxd -r -c 256 -ps | openssl enc -d -aes-256-ctr -pbkdf2 -k "$password"; }
 
 case $pass in
 	TEST1) tc "53616c7465645f5f0b1923778b8217eece6451db71959221574a7a3024bc70033dd3ac53ae8335f0b41707aff71ddb9267744988b0cde58b55dc301dc87efbad44f62a77363a01e1bb90be8c01f0c761a59de6394c9062d868b0e5c74737d1da1b886e616d2f10bb9203ae64fe3271af84d5ab91fedaca082278ba415e98737a";;
