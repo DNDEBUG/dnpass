@@ -1,14 +1,14 @@
 # dnpass
 Simple non-dumb password manager
 
-##Dependences  
+### Dependences  
 *fzf*  
 *[xxd](https://github.com/vim/vim/tree/master/src/xxd)*  
 *openssl* (You probably already have this one)  
   
-how to make it work  
+## How to make it work  
   
-## Creating your password  
+### Creating your password  
   
 Create a txt file with your informations  
 *Example*  
