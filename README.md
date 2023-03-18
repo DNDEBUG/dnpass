@@ -10,32 +10,32 @@ Simple non-dumb password manager
   
 ### Creating your password  
   
-Create a txt file with your informations  
-*Example*  
+**Create a txt file with your informations**  
+Example:  
 ```
 Email: your@email.here
 Password: yourpassword
 Info: Some extra information
 ```
   
-now encrypt it with openssl  
+**Encrypt it with openssl**  
 
 ```
 openssl enc -e -aes-256-ctr -pbkdf2 -in password_file.txt -out password_file.enc
 ```
   
-now you use xxd to turn it into text  
+**Use xxd to turn it into text**  
 
 ```
 xxd -c 100000000 -ps password_file.enc > hex_data.txt
 ```
   
-you can tweak the settings for openssl and xxd  
+You can tweak the settings for openssl and xxd  
 but you have to match them in the script  
   
-now add the password file to the script  
+**Add the password file to the script**  
   
-start by editing this part  
+Start by editing this part  
 ```
 pass=$(fzf << EOF
 TEST1
@@ -44,7 +44,7 @@ TEST3
 EOF)
 ```
   
-you add your accounts like this for example  
+You add your accounts like this for example  
   
 ```
 pass=$(fzf << EOF
@@ -54,7 +54,7 @@ Github
 EOF)
 ```
   
-then go lower to the ```case``` part  
+Then go to the ```case``` part  
   
 ```
 case $pass in
