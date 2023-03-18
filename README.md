@@ -59,8 +59,8 @@ Then go to the ```case``` part
 ```
 case $pass in
 	Bank) tc "Copy the text from the file you created with xxd to here (hex_data.txt for this example)";;
-  Facebook) tc "Same as a above";;
-  Github) tc "Same as above";;
+	Facebook) tc "Same as a above";;
+	Github) tc "Same as above";;
 esac
 ```
   
