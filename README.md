@@ -37,11 +37,11 @@ but you have to match them in the script
   
 Start by editing this part  
 ```
-pass=$(fzf << EOF
+pass=`fzf << EOF
 TEST1
 TEST2
 TEST3
-EOF)
+EOF`
 ```
   
 You add your accounts like this for example  
