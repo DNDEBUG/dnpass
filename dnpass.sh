@@ -1,8 +1,9 @@
-pass=$(fzf << EOF
+#!/bin/sh
+pass=`fzf << EOF
 TEST1
 TEST2
 TEST3
-EOF)
+EOF`
 
 tc() { read -rp 'Enter Your Password: ' password; printf %s "$1" | xxd -r -c 256 -ps | openssl enc -d -aes-256-ctr -pbkdf2 -k "$password"; }
 
